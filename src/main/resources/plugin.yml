@@ -1,0 +1,5 @@
+name: StarWarsReborn
+version: '${version}'
+main: net.creativious.starwarsreborn.StarWarsRebor
+api-version: '1.20'
+authors: [Creativious]
