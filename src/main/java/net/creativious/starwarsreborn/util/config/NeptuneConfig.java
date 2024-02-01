@@ -28,7 +28,7 @@ public class NeptuneConfig {
         this.init_ran = true;
         String folder_loc = "plugins/" + plugin_id;
         new File(folder_loc).mkdir();
-        File config_file = new File(folder_loc + "/config.yml");
+        File config_file = new File(folder_loc + "/config.yaml");
         if (config_file.exists()) {
             this.loadConfig(config_file);
         }

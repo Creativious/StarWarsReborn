@@ -13,6 +13,10 @@ public class NeptuneSerializationUtil {
         supportedClasses.add(Long.class);
         supportedClasses.add(Double.class);
         supportedClasses.add(String.class);
+        supportedClasses.add(int.class);
+        supportedClasses.add(long.class);
+        supportedClasses.add(double.class);
+        supportedClasses.add(boolean.class);
     }
 
     public static boolean isSupportedClass(Class<?> clazz) {
@@ -34,6 +38,14 @@ public class NeptuneSerializationUtil {
             return Double.parseDouble(value);
         } else if (clazz.equals(String.class)) {
             return value;
+        } else if (clazz.equals(int.class)) {
+            return Integer.parseInt(value);
+        } else if (clazz.equals(long.class)) {
+            return Long.parseLong(value);
+        } else if (clazz.equals(double.class)) {
+            return Double.parseDouble(value);
+        } else if (clazz.equals(boolean.class)) {
+            return Boolean.parseBoolean(value);
         }
         return null;
     }
